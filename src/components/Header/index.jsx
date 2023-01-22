@@ -2,11 +2,11 @@ import React from "react";
 import HeaderMenu from "./HeaderMenu";
 import Login from "../Auth/Login";
 
-import "./styles/index.css";
+import "./styles/HeaderIndex.css";
 
 export const Header = () => {
   return (
-    <div className="index">
+    <div className="HeaderIndex">
       <HeaderMenu />
       Logo
       <Login />
