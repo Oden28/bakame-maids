@@ -6,9 +6,11 @@ import "./styles/HeaderIndex.css";
 
 export const Header = () => {
   return (
-    <div className="HeaderIndex">
+    <div className="flex flex-row justify-between px-10 py-5 items-center">
       <HeaderMenu />
-      Logo
+      <div className="contianer px-3 py-2 bg-green text-white rounded-l-[20px] rounded-b-[20px]">
+        Job Jumper
+      </div>
       <Login />
     </div>
   );

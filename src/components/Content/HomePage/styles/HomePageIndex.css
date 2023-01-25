@@ -1,4 +1,11 @@
 .HomePageIndex {
   display: flex;
   flex-direction: column;
+  border-radius: 30px;
+}
+
+.HomePageButton {
+  width: 50px;
+  font-family: "sans-serif";
+  font-weight: 300;
 }
