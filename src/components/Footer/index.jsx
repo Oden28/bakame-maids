@@ -1,10 +1,10 @@
-import { FiveG } from "@mui/icons-material";
 import React from "react";
 import twitter from "../../assets/images/twitter.svg";
 import insta from "../../assets/images/insta.svg";
 import facebook from "../../assets/images/facebook.svg";
 import linkedin from "../../assets/images/linkedin.svg";
 import copyright from "../../assets/images/copyright.svg";
+
 const Footer = () => {
   return (
     <div className="bg-green pt-20 pb-10 px-10">

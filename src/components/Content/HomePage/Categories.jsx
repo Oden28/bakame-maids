@@ -4,7 +4,7 @@ import arrowRight from "../../../assets/images/arrowRight.svg";
 
 const Categories = ({ category }) => {
   return (
-    <div className="flex flex-col justify-between my-3 text-white p-10 w-[342px] h-[304px] bg-green rounded-[20px]">
+    <div className="mx-auto flex flex-col justify-between my-5 text-white p-10 w-[342px] h-[304px] bg-green rounded-[20px] md:scale-125">
       <div className="font-bold text-[48px] max-w-[205px] leading-10">
         {category}
       </div>
