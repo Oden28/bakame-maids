@@ -1,5 +1,8 @@
 import React from "react";
+
 import revStar from "../../../assets/images/revStar.svg";
+import location from "../../../assets/images/location.svg";
+
 const Maid = ({ maid_info }) => {
   return (
     <div className="bg-green p-5 rounded-[20px] text-white mb-10">
@@ -25,6 +28,9 @@ const Maid = ({ maid_info }) => {
       <div className="mb-2">
         <p className="font-semibold"> RWF {maid_info.avg_salary}/month</p>
         {maid_info.open_negotiation && <p>(Open for negotiations)</p>}
+      </div>
+      <div className="mb-2 flex flex-row  text-[12px]">
+        <img src={location} alt="location" /> {maid_info.location}
       </div>
       <div className="w-full h-[1px] bg-white mb-2"></div>
       <div>About me</div>
