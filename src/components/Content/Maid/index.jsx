@@ -8,7 +8,7 @@ import arrowLeft from "../../../assets/images/arrowLeft.svg";
 const Maid = () => {
   return (
     <div className="flex justify-center">
-      <div className="mx-4 px-8 pt-5 bg-green rounded-[20px] pb-10 mb-10 md:max-w-[1000px]">
+      <div className="mx-4 px-8 pt-5 bg-green rounded-[20px] pb-10 mb-10 md:max-w-[1000px] shadow-md">
         <div className="flex flex-row justify-between">
           <img src={arrowLeft} alt="arrowLeft" />
           <p className="text-white font-semibold">Profile</p>
