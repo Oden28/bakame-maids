@@ -6,7 +6,7 @@ import location from "../../../assets/images/location.svg";
 
 const MaidPreview = ({ maid_info }) => {
   return (
-    <div className="bg-green p-5  text-white mb-10">
+    <div className="bg-green p-5  text-white mb-1">
       <div className="bg-gray rounded-[20px] w-full h-[204px] mx-auto overflow-hidden ">
         <img
           className="w-full h-[204px] object-fit"
