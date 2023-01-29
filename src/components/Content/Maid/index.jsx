@@ -7,38 +7,40 @@ import arrowLeft from "../../../assets/images/arrowLeft.svg";
 
 const Maid = () => {
   return (
-    <div className="mx-4 px-8 pt-5 bg-green rounded-[20px] pb-10 mb-10">
-      <div className="flex flex-row justify-between">
-        <img src={arrowLeft} alt="arrowLeft" />
-        <p className="text-white font-semibold">Profile</p>
-        <div></div>
-      </div>
-      <MaidPreview maid_info={maid_info} />
-
-      <div className="font-semibold">Reviews</div>
-      {/* Overall rating */}
-      <div className="flex flex-row ml-5 mt-3">
-        <div>5.0</div>
-        <div className="flex flex-row ml-3">
-          <img src={starFilled} alt="starRate" />
-          <img src={starFilled} alt="starRate" />
-          <img src={starFilled} alt="starRate" />
-          <img src={starFilled} alt="starRate" />
-          <img src={starFilled} alt="starRate" />
+    <div className="flex justify-center">
+      <div className="mx-4 px-8 pt-5 bg-green rounded-[20px] pb-10 mb-10 md:max-w-[1000px]">
+        <div className="flex flex-row justify-between">
+          <img src={arrowLeft} alt="arrowLeft" />
+          <p className="text-white font-semibold">Profile</p>
+          <div></div>
         </div>
-      </div>
-      {/* Reviews */}
-      <div>
-        <Reviews review_info={review_info} />
-        <Reviews review_info={review_info} />
-        <Reviews review_info={review_info} />
-        <Reviews review_info={review_info} />
-      </div>
+        <MaidPreview maid_info={maid_info} />
 
-      {/* Load more reviews */}
-      <div className="flex justify-center">
-        <div className="bg-gray-light rounded-[20px] flex justify-center mt-10 text-[14px] py-2 px-4 font-semibold">
-          Load more reviews
+        <div className="font-semibold">Reviews</div>
+        {/* Overall rating */}
+        <div className="flex flex-row ml-5 mt-3">
+          <div>5.0</div>
+          <div className="flex flex-row ml-3">
+            <img src={starFilled} alt="starRate" />
+            <img src={starFilled} alt="starRate" />
+            <img src={starFilled} alt="starRate" />
+            <img src={starFilled} alt="starRate" />
+            <img src={starFilled} alt="starRate" />
+          </div>
+        </div>
+        {/* Reviews */}
+        <div>
+          <Reviews review_info={review_info} />
+          <Reviews review_info={review_info} />
+          <Reviews review_info={review_info} />
+          <Reviews review_info={review_info} />
+        </div>
+
+        {/* Load more reviews */}
+        <div className="flex justify-center">
+          <div className="bg-gray-light rounded-[20px] flex justify-center mt-10 text-[14px] py-2 px-4 font-semibold">
+            Load more reviews
+          </div>
         </div>
       </div>
     </div>
