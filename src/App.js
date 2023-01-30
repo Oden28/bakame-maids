@@ -5,8 +5,12 @@ import Content from "./components/Content";
 function App() {
   return (
     <div className="App">
-      <Header />
+      <div className="sticky top-0  z-30 w-full bg-gray-light">
+        <Header />
+      </div>
+
       <Content />
+
       <Footer />
     </div>
   );
