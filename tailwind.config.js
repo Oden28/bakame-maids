@@ -10,6 +10,7 @@ module.exports = {
       "gray-dark": "#B7B7B7",
       white: "#FFFFFF",
       black: "#000000",
+      blue: "2D4059",
     },
     fontFamily: {
       display: ["Poppins"],

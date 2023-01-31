@@ -33,7 +33,7 @@ const HomePage = () => {
         <Link to="/maids">
           <Categories category={"Maids"} />
         </Link>
-        <Link>
+        <Link to="/taskForm">
           <Categories category={"Task Workers"} />
         </Link>
       </div>
