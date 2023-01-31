@@ -1,6 +1,7 @@
 import React from "react";
 import MaidPreview from "./MaidPreview";
 import Reviews from "./Reviews";
+import { Link } from "react-router-dom";
 
 import starFilled from "../../../assets/images/starFilled.svg";
 import arrowLeft from "../../../assets/images/arrowLeft.svg";
@@ -10,7 +11,9 @@ const Maid = () => {
     <div className="flex justify-center">
       <div className="mx-4 px-8 pt-5 bg-green rounded-[20px] pb-10 mb-10 md:max-w-[1000px] shadow-md">
         <div className="flex flex-row justify-between">
-          <img src={arrowLeft} alt="arrowLeft" />
+          <Link to="/maids">
+            <img src={arrowLeft} alt="arrowLeft" />
+          </Link>
           <p className="text-white font-semibold">Profile</p>
           <div></div>
         </div>
@@ -38,7 +41,7 @@ const Maid = () => {
 
         {/* Load more reviews */}
         <div className="flex justify-center">
-          <div className="bg-gray-light rounded-[20px] flex justify-center mt-10 text-[14px] py-2 px-4 font-semibold">
+          <div className="hover:shadow-md hover:bg-yellow hover:text-white bg-gray-light rounded-[20px] flex justify-center mt-10 text-[14px] py-2 px-4 font-semibold">
             Load more reviews
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import revStar from "../../../assets/images/revStar.svg";
 import location from "../../../assets/images/location.svg";
@@ -36,9 +37,11 @@ const Maid = ({ maid_info }) => {
       <div>About me</div>
       <p className="mb-3">{maid_info.description}</p>
 
-      <div className="bg-gray text-black rounded-[20px] text-center mx-10 py-2">
-        <p>Find out more</p>
-      </div>
+      <Link to="/maids/maid">
+        <div className="hover:shadow-md hover:bg-yellow hover:text-white bg-gray text-black rounded-[20px] text-center mx-10 py-2">
+          <p>Find out more</p>
+        </div>
+      </Link>
     </div>
   );
 };

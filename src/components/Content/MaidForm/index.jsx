@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Form from "./Form";
-
+import { Link } from "react-router-dom";
 import arrowLeftDark from "../../../assets/images/arrowLeftDark.svg";
 
 const MaidForm = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="flex justify-center">
       <div className="mx-4 my-6 px-10 py-4 bg-gray rounded-[20px] shadow-md max-w-[800px] grow">
         {/* Header */}
         <div className="flex flex-row justify-between items-center font-semibold mb-4 mt-3">
-          <div>
-            <img src={arrowLeftDark} alt="arrowLeft" />
-          </div>
+          <Link to="/maids/maid">
+            <div>
+              <img src={arrowLeftDark} alt="arrowLeft" />
+            </div>
+          </Link>
           <div>Job description</div>
           <div></div>
         </div>
@@ -23,9 +29,11 @@ const MaidForm = () => {
         </div>
         {/* Submit button */}
         <div className="flex justify-center mb-5">
-          <div className="bg-green rounded-[20px] py-2 px-20 text-white">
-            Submit
-          </div>
+          <Link>
+            <div className="hover:shadow-md hover:bg-yellow bg-green rounded-[20px] py-2 px-20 text-white">
+              Submit
+            </div>
+          </Link>
         </div>
       </div>
     </div>

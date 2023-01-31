@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Maid from "./Maid";
 import SearchBar from "./SearchBar";
 
 const Maids = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className=" p-6 drop-shadow-xl">
       <div className="flex justify-center">

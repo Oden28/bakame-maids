@@ -2,6 +2,7 @@ import React from "react";
 import PromoArea from "./PromoArea";
 import Categories from "./Categories";
 import ProductOffering from "./ProductOffering";
+import { Link } from "react-router-dom";
 
 import locationman from "../../../assets/images/locationman.svg";
 import "./styles/HomePageIndex.css";
@@ -16,15 +17,25 @@ const HomePage = () => {
           </div>
           <div>
             <PromoArea />
-            <div className="max-w-[280px] mx-auto text-center py-[20px] px-[70px] bg-green rounded-[20px] mt-4 mb-10 text-white  text-[18px]">
-              Explore Now
-            </div>
+            <a href="#categories">
+              <div className="hover:shadow-md hover:bg-yellow max-w-[280px] mx-auto text-center py-[20px] px-[70px] bg-green rounded-[20px] mt-4 mb-10 text-white  text-[18px]">
+                Explore Now
+              </div>
+            </a>
           </div>
         </div>
       </div>
+      <div
+        id="categories"
+        className="absolute top-[600px] md:top-[450px]"
+      ></div>
       <div className="md:flex md:flex-row md:gap-[100px] md:mt-12">
-        <Categories category={"Maids"} />
-        <Categories category={"Task Workers"} />
+        <Link to="/maids">
+          <Categories category={"Maids"} />
+        </Link>
+        <Link>
+          <Categories category={"Task Workers"} />
+        </Link>
       </div>
       <div className="py-10 text-[48px] font-bold max-w-[319px] leading-10">
         Look no further for the best workers in Rwanda!

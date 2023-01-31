@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // import revStar from "../../../assets/images/revStar.svg";
 import starFilled from "../../../assets/images/starFilled.svg";
@@ -40,9 +41,11 @@ const MaidPreview = ({ maid_info }) => {
         <div>About me</div>
         <p className="mb-3">{maid_info.description}</p>
         <div className="w-full h-[1px] bg-white mb-2"></div>
-        <div className="bg-gray text-black rounded-[20px] text-center mx-10 py-2 my-5">
-          <p>Book now</p>
-        </div>
+        <Link to="/maids/maid/form">
+          <div className="hover:shadow-md hover:bg-yellow hover:text-white bg-gray text-black rounded-[20px] text-center mx-10 py-2 my-5">
+            <p>Book now</p>
+          </div>
+        </Link>
         <div className="w-full h-[1px] bg-white mb-2"></div>
       </div>
     </div>
