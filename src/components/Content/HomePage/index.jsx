@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PromoArea from "./PromoArea";
 import Categories from "./Categories";
 import ProductOffering from "./ProductOffering";
@@ -9,6 +9,10 @@ import "./styles/HomePageIndex.css";
 import { PlayCircleFilled } from "@mui/icons-material";
 
 const HomePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="items-center bg-slate-400 HomePageIndex mb-14">
       <div className=" md:bg-gray-dark md:px-[110px] md:mx-2 md:rounded-[20px]">

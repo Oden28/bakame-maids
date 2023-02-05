@@ -1,41 +1,71 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Form from "./Form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import SuccessMessage from "../../commonComponents/SuccessMessage";
+
 import arrowLeftDark from "../../../assets/images/arrowLeftDark.svg";
 
 const MaidForm = () => {
+  const [successMessageFlag, setSuccessMessageFlag] = useState(false);
+  const navigate = useNavigate();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const message = () => {
+    setSuccessMessageFlag(true);
+    //console.log(successMessageFlag);
+  };
+  const handleHome = () => {
+    setSuccessMessageFlag(false);
+
+    // Clear the form
+    // document.getElementById("form").reset();
+
+    // Go to a new route
+    navigate("/");
+  };
+
   return (
     <div className="flex justify-center">
-      <div className="mx-4 my-6 px-10 py-4 bg-gray rounded-[20px] shadow-md max-w-[800px] grow">
-        {/* Header */}
-        <div className="flex flex-row justify-between items-center font-semibold mb-4 mt-3">
-          <Link to="/maids/maid">
-            <div>
-              <img src={arrowLeftDark} alt="arrowLeft" />
-            </div>
-          </Link>
-          <div>Job description</div>
-          <div></div>
-        </div>
-        {/* Questions*/}
-        <div className="mb-10">
-          {form_info.map((info) => (
-            <Form key={info.id} form_info={info} />
-          ))}
-        </div>
-        {/* Submit button */}
-        <div className="flex justify-center mb-5">
-          <Link>
-            <div className="hover:shadow-md hover:bg-yellow bg-green rounded-[20px] py-2 px-20 text-white">
+      {/* Success message */}
+
+      {successMessageFlag ? (
+        <SuccessMessage
+          buttonText={"Return to home"}
+          message={"Thanks for your request, we will get back to you shortly!"}
+          onButtonClick={handleHome}
+        />
+      ) : (
+        <div className="mx-4 my-6 px-10 py-4 bg-gray rounded-[20px] shadow-md max-w-[800px] grow">
+          {/* Header */}
+          <div className="flex flex-row justify-between items-center font-semibold mb-4 mt-3">
+            <Link to="/maids/maid">
+              <div>
+                <img src={arrowLeftDark} alt="arrowLeft" />
+              </div>
+            </Link>
+            <div>Job description</div>
+            <div></div>
+          </div>
+          {/* Questions*/}
+          <div className="mb-10">
+            {form_info.map((info) => (
+              <Form key={info.id} form_info={info} />
+            ))}
+          </div>
+          {/* Submit button */}
+          <div className="flex justify-center mb-5">
+            <div
+              onClick={message}
+              className="hover:shadow-md hover:bg-yellow cursor-pointer bg-green rounded-[20px] py-2 px-20 text-white"
+            >
               Submit
             </div>
-          </Link>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
