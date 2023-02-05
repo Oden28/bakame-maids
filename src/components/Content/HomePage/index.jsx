@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 import locationman from "../../../assets/images/locationman.svg";
 import "./styles/HomePageIndex.css";
+import { PlayCircleFilled } from "@mui/icons-material";
 
 const HomePage = () => {
   return (
@@ -37,33 +38,46 @@ const HomePage = () => {
           <Categories category={"Task Workers"} />
         </Link>
       </div>
-      <div className="py-10 text-[48px] font-bold max-w-[319px] leading-10">
-        Look no further for the best workers in Rwanda!
+      <div className="md:flex md:flex-row md:items-center md:mt-10  md:gap-10">
+        <div className="py-10 text-[48px] font-bold max-w-[319px] leading-10">
+          Look no further for the best workers in Rwanda!
+        </div>
+        <div className="mb-5 md:w-96">
+          <p className="text-[38px] font-bold md:text-center mb-5">
+            How it works!
+          </p>
+          {/* Create a video section  */}
+          <div className="bg-gray rounded-[20px] w-full h-60 flex items-center justify-center text-[50px]">
+            <PlayCircleFilled fontSize="inherit" />
+          </div>
+        </div>
       </div>
-      <ProductOffering
-        header={"Users can post tailored jobs"}
-        text={
-          "Users can post tasks they need help with, and the website can match them with local service providers who are available and qualified to complete the task."
-        }
-      />
-      <ProductOffering
-        header={"Users can find professional maids"}
-        text={
-          "Users can browse through a list of professional maids and book a maid that meets their requirements."
-        }
-      />
-      <ProductOffering
-        header={"Users can leave reviews of services"}
-        text={
-          "Users can rate the work done by maids and task workers by leaving a review on their profiles."
-        }
-      />
-      <ProductOffering
-        header={"24/7 support"}
-        text={
-          "Our team of experts are ready to answer any specific requests you may have!"
-        }
-      />
+      <div className="md:mx-10 lg:mx-32">
+        <ProductOffering
+          header={"Users can post tailored jobs"}
+          text={
+            "Users can post tasks they need help with, and the website can match them with local service providers who are available and qualified to complete the task."
+          }
+        />
+        <ProductOffering
+          header={"Users can find professional maids"}
+          text={
+            "Users can browse through a list of professional maids and book a maid that meets their requirements."
+          }
+        />
+        <ProductOffering
+          header={"Users can leave reviews of services"}
+          text={
+            "Users can rate the work done by maids and task workers by leaving a review on their profiles."
+          }
+        />
+        <ProductOffering
+          header={"24/7 support"}
+          text={
+            "Our team of experts are ready to answer any specific requests you may have!"
+          }
+        />
+      </div>
     </div>
   );
 };
